@@ -1,0 +1,21 @@
+{
+  "name": "autosaver",
+  "version": "0.0.1",
+  "description": "Wraps your AJAX in a cozy, edge-case-preventing blanket.",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start --single-run"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-coffee-preprocessor": "^0.2.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.17"
+  }
+}

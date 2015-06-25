@@ -1,0 +1,20 @@
+{
+  "name": "autosaver",
+  "version": "0.0.1",
+  "authors": [
+    "Adam Becker <ad@mbecker.cc>"
+  ],
+  "description": "Wraps your AJAX in a cozy, edge-case-preventing blanket.",
+  "main": "index.coffee",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3"
+  }
+}
