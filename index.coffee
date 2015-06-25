@@ -39,6 +39,11 @@ class Autosaver
   ensure: (cb) ->
     if @isPending()
       @saveNow(cb)
+    else if @inFlight
+      if @afterFlight
+        @saveNow(cb)
+      else
+        @afterFlight = cb
     else
       cb()
 
@@ -64,7 +69,7 @@ class Autosaver
 
   resetBackoff: ->
     _.extend @options, @preBackoffOptions
-    @orignals = undefined
+    @preBackoffOptions = undefined
     @_resetTimeout()
 
   _clearTimeout: ->
