@@ -1,4 +1,4 @@
-Autosaver [![status]](https://circleci.com/gh/dobtco/formrenderer-base/tree/master) ![bower]
+autosaver [![status]](https://circleci.com/gh/dobtco/formrenderer-base/tree/master) ![bower]
 ====
 
 Autosaver wraps your AJAX in a cozy, edge-case-preventing blanket.
