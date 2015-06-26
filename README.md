@@ -1,7 +1,7 @@
-autosaver [![status]](https://circleci.com/gh/dobtco/formrenderer-base/tree/master) ![bower]
+autosaver [![status]](https://circleci.com/gh/dobtco/autosaver/tree/master) ![bower]
 ====
 
-Autosaver wraps your AJAX in a cozy, edge-case-preventing blanket.
+Autosaver wraps your AJAX save logic in a cozy, edge-case-preventing blanket.
 
 ## Usage
 
@@ -67,5 +67,5 @@ Resets the save interval.
 | ms | The number of milliseconds to delay calls to `fn`. (Referred to as `wait` by most debounce functions.) | 2000 |
 | max | The maximum time `fn` is allowed to be delayed before it is invoked. Set to `0` to always wait. | 8000 |
 
-[status]: https://circleci-badges.herokuapp.com/dobtco/Autosaver/98b9e34ac31737f706d16fb0b06b67ff28df5c18
+[status]: https://circleci-badges.herokuapp.com/dobtco/autosaver/98b9e34ac31737f706d16fb0b06b67ff28df5c18
 [bower]: https://img.shields.io/bower/v/autosaver.svg
