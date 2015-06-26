@@ -1,6 +1,6 @@
 {
   "name": "autosaver",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Wraps your AJAX in a cozy, edge-case-preventing blanket.",
   "main": "index.coffee",
   "scripts": {
