@@ -54,23 +54,23 @@ class Autosaver
     @queuedAt = undefined
     @_clearTimeout()
 
-  maxBackoffTo: ->
-    @preBackoffOptions.ms * Math.pow(2, 4) # 5 Intervals
-
   backoff: ->
     @preBackoffOptions ||= {
       max: @options.max
       ms: @options.ms
     }
 
-    @options.max = 0
-    @options.ms = Math.min(@options.ms * 2, @maxBackoffTo())
+    @options.ms = Math.min(@options.ms * 2, @_maxBackoffTo())
+    @options.max = @options.ms
     @_resetTimeout()
 
   resetBackoff: ->
     _.extend @options, @preBackoffOptions
     @preBackoffOptions = undefined
     @_resetTimeout()
+
+  _maxBackoffTo: ->
+    @preBackoffOptions.ms * Math.pow(2, 4) # 5 Intervals
 
   _clearTimeout: ->
     clearTimeout(@timeout)

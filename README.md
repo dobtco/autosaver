@@ -31,9 +31,35 @@ autosaver.saveLater();
 autosaver.saveNow();
 ```
 
-However, Autosaver shines by handling the edge cases for you. By using  Autosaver, you ensure that the client is only ever sending *1 request at a time* to your server, otherwise you might run into race conditions where the user's  data will be overwritten by conflicting saves.
+However, Autosaver shines by handling the edge cases for you. By using  Autosaver, you ensure that the client is only ever sending *1 request at a time* to your server, otherwise you might run into race conditions where the user's data will be overwritten by conflicting saves.
 
-### Options
+## Methods
+
+#### .saveLater()
+
+Queues the call to your save function until `@options.ms` have passed. If the function has already been queued for more than `@options.max` milliseconds, calls it immediately.
+
+#### .saveNow(cb)
+
+Calls the save function immediately. If there is already a save in-flight, waits until after that save is complete to start another save.
+
+#### .ensure(cb)
+
+If there are unsycned changes, calls the save function and then `cb`. If there are no changes, calls `cb` immediately. Useful to ensuring that all changes are saved before a user [leaves the page](http://blog.dobt.co/2015/04/01/beforeunload-js/), for example.
+
+#### .isPending()
+
+Returns `true` if there is a save queued, otherwise `false` otherwise.
+
+#### .backoff()
+
+Exponentially increases the save interval. Useful if the server returns an error code so that you don't flood it with requests.
+
+#### .resetBackoff()
+
+Resets the save interval.
+
+## Options
 
 | key | description | default |
 | --- | --- | --- |

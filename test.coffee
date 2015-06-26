@@ -234,9 +234,11 @@ describe 'Autosaver', ->
       as = new Autosaver
       as.backoff()
       expect(as.options.ms).toBe(20)
+      expect(as.options.max).toBe(20)
       as.resetBackoff()
       expect(as.options.ms).toBe(10)
       as.backoff()
       expect(as.options.ms).toBe(20)
       as.resetBackoff()
+      expect(as.options.max).toBe(8000)
       expect(as.options.ms).toBe(10)
