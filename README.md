@@ -69,3 +69,7 @@ Resets the save interval.
 
 [status]: https://circleci-badges.herokuapp.com/dobtco/autosaver/98b9e34ac31737f706d16fb0b06b67ff28df5c18
 [bower]: https://img.shields.io/bower/v/autosaver.svg
+
+## License
+
+[MIT](http://dobtco.mit-license.org/)
