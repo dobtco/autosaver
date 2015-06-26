@@ -1,4 +1,4 @@
-describe 'Autosaver', ->
+describe 'autosaver', ->
   beforeAll ->
     Autosaver::defaults.ms = 10
 

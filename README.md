@@ -1,7 +1,7 @@
 autosaver [![status]](https://circleci.com/gh/dobtco/autosaver/tree/master) ![bower]
 ====
 
-Autosaver wraps your AJAX save logic in a cozy, edge-case-preventing blanket.
+autosaver wraps your AJAX save logic in a cozy, edge-case-preventing blanket.
 
 ## Usage
 
@@ -18,20 +18,20 @@ var autosaver = new Autosaver({
   }
 });
 
-// Autosaver debounces your AJAX calls so that only one request is made 
+// autosaver debounces your AJAX calls so that only one request is made 
 // on the trailing edge. In this example, the AJAX request will be made 
 // *2000 milliseconds after* the last call to saveLater().
 autosaver.saveLater();
 autosaver.saveLater();
 autosaver.saveLater();
 
-// Autosaver also allows for calling .saveNow(). In this example, the AJAX 
+// autosaver also allows for calling .saveNow(). In this example, the AJAX 
 // request will be sent immediately after the call to .saveNow().
 autosaver.saveLater();
 autosaver.saveNow();
 ```
 
-However, Autosaver shines by handling the edge cases for you. By using  Autosaver, you ensure that the client is only ever sending *1 request at a time* to your server, otherwise you might run into race conditions where the user's data will be overwritten by conflicting saves.
+However, autosaver shines by handling the edge cases for you. By using autosaver, you ensure that the client is only ever sending *1 request at a time* to your server, otherwise you might run into race conditions where the user's data will be overwritten by conflicting saves.
 
 ## Methods
 
