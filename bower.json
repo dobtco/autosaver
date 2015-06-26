@@ -1,6 +1,6 @@
 {
   "name": "autosaver",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     "Adam Becker <adam@dobt.co>"
   ],
@@ -15,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "underscore": "~1.8.3"
+    "underscore": "*"
   }
 }
