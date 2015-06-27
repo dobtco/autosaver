@@ -45,11 +45,11 @@ Calls the save function immediately. If there is already a save in-flight, waits
 
 #### .ensure(cb)
 
-If there are unsycned changes, calls the save function and then `cb`. If there are no changes, calls `cb` immediately. Useful to ensuring that all changes are saved before a user [leaves the page](http://blog.dobt.co/2015/04/01/beforeunload-js/), for example.
+If there are unsycned changes, calls the save function and then `cb`. If there are no changes, calls `cb` immediately. Useful to ensure all changes are saved before a user [leaves the page](http://blog.dobt.co/2015/04/01/beforeunload-js/), for example.
 
 #### .isPending()
 
-Returns `true` if there is a save queued, otherwise `false` otherwise.
+Returns `true` if there is a save queued, otherwise returns `false`.
 
 #### .backoff()
 
