@@ -18,14 +18,14 @@ var autosaver = new Autosaver({
   }
 });
 
-// autosaver debounces your AJAX calls so that only one request is made 
-// on the trailing edge. In this example, the AJAX request will be made 
+// autosaver debounces your AJAX calls so that only one request is made
+// on the trailing edge. In this example, the AJAX request will be made
 // *2000 milliseconds after* the last call to saveLater().
 autosaver.saveLater();
 autosaver.saveLater();
 autosaver.saveLater();
 
-// autosaver also allows for calling .saveNow(). In this example, the AJAX 
+// autosaver also allows for calling .saveNow(). In this example, the AJAX
 // request will be sent immediately after the call to .saveNow().
 autosaver.saveLater();
 autosaver.saveNow();
@@ -45,7 +45,7 @@ Calls the save function immediately. If there is already a save in-flight, waits
 
 #### .ensure(cb)
 
-If there are unsycned changes, calls the save function and then `cb`. If there are no changes, calls `cb` immediately. Useful to ensure all changes are saved before a user [leaves the page](http://blog.dobt.co/2015/04/01/beforeunload-js/), for example.
+If there are unsycned changes, calls the save function and then `cb`. If there are no changes, calls `cb` immediately. Useful to ensure all changes are saved before a user [leaves the page](https://www.dobt.co/blog/beforeunload-js/), for example.
 
 #### .isPending()
 
